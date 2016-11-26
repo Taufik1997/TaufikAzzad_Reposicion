@@ -47,7 +47,7 @@ int main(){
 				if(racional1 != NULL||racional2 != NULL){
 					Racional* respuesta;
 					respuesta = *racional1 - *racional2;
-					cout<<"La suma es de : "<<respuesta->toString();
+					cout<<"La resta es de : "<<respuesta->toString();
 
 				}else{
 					cout<<"Debe crear las dos fracciones antes de hacer una operacion"<<endl;
@@ -57,6 +57,9 @@ int main(){
 			};
 			case 5:{
 				if(racional1 != NULL||racional2 != NULL){
+					Racional* respuesta;
+					respuesta = *racional1 * *racional2;
+					cout<<"La multiplicacion es de : "<<respuesta->toString();
 
 				}else{
 					cout<<"Debe crear las dos fracciones antes de hacer una operacion"<<endl;
@@ -66,6 +69,9 @@ int main(){
 			};
 			case 6:{
 				if(racional1 != NULL||racional2 != NULL){
+					Racional* respuesta;
+					respuesta = *racional1 / *racional2;
+					cout<<"La division es de : "<<respuesta->toString();
 
 				}else{
 					cout<<"Debe crear las dos fracciones antes de hacer una operacion"<<endl;
@@ -75,6 +81,7 @@ int main(){
 			};
 		}//Fin Switch 
 	}while(opcion>=0 && opcion <=6);//Fin do while
-
+	delete racional1;
+	delete racional2;
 	return 0;
 }
