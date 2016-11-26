@@ -45,6 +45,9 @@ int main(){
 			}
 			case 4:{
 				if(racional1 != NULL||racional2 != NULL){
+					Racional* respuesta;
+					respuesta = *racional1 - *racional2;
+					cout<<"La suma es de : "<<respuesta->toString();
 
 				}else{
 					cout<<"Debe crear las dos fracciones antes de hacer una operacion"<<endl;
