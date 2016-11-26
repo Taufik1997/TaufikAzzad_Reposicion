@@ -1,6 +1,9 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+#include "Racional.h"
+
+
 using std::stringstream;
 using std::string;
 using namespace std;
@@ -31,38 +34,54 @@ int Racional::getDenominador(){
   return denominador;
 }
 
-Racional* Racional::operator+(Racional* racional){
+Racional* Racional::operator+(Racional racional){
   Racional* respuesta = new Racional();
-  int numRacional = racional-> getNumerador(), denRacional = racional->getDenominador();
-  respuesta.setNumerador = numerador*denRacional + denominador * numRacional;
-  respuesta.setDenominador = denominador * denRacional;
+  int numRacional = racional.getNumerador(), denRacional = racional.getDenominador();
+  int resp1, resp2;
+  resp1 = numerador*denRacional + denominador * numRacional;
+  resp2 = denominador * denRacional ;
+  respuesta->setNumerador(resp1);
+  respuesta->setDenominador(resp2);
 
   return respuesta; 
 }//fin metodo 
 
-Racional* Racional::operator-(Racional* racional){
+Racional* Racional::operator-(Racional racional){
   Racional* respuesta = new Racional();
-  int numRacional = racional-> getNumerador(), denRacional = racional->getDenominador();
-  respuesta.setNumerador = numerador*denRacional - denominador * numRacional;
-  respuesta.setDenominador = denominador * denRacional;
+  int numRacional = racional.getNumerador(), denRacional = racional.getDenominador();
+  int resp1, resp2;
+  resp1 =numerador*denRacional - denominador * numRacional;
+  resp2 =denominador * denRacional;
+  respuesta->setNumerador(resp1);
+  respuesta->setDenominador(resp2);
 
   return respuesta; 
 }//Fin metodo resta
 
-Racional* Racional::operator*(Racional* racional){
+Racional* Racional::operator*(Racional racional){
   Racional* respuesta = new Racional();
-  int numRacional = racional-> getNumerador(), denRacional = racional->getDenominador();
-  respuesta.setNumerador = numerador* numRacional;
-  respuesta.setDenominador = denominador * denRacional;
+  int numRacional = racional.getNumerador(), denRacional = racional.getDenominador();
+  int resp1, resp2;
+  resp1 = numerador* numRacional;
+  resp2 = denominador * denRacional;
+  respuesta->setNumerador(resp1);
+  respuesta->setDenominador(resp2);
 
   return respuesta; 
 }
 
-Racional* Racional::operator*(Racional* racional){
+Racional* Racional::operator/(Racional racional){
   Racional* respuesta = new Racional();
-  int numRacional = racional-> getNumerador(), denRacional = racional->getDenominador();
-  respuesta.setNumerador = numerador*denRacional;
-  respuesta.setDenominador = denominador * numRacional;
+  int numRacional = racional.getNumerador(), denRacional = racional.getDenominador();
+  int resp1, resp2;
+  resp1 = numerador*denRacional;
+  resp2 = denominador * numRacional;
+  while(resp1%2==0 && resp2%2==0){
+    resp1= resp1/2;
+    resp2= res2/2;
+  }
+  respuesta->setNumerador(resp1);
+  respuesta->setDenominador(resp2);
 
   return respuesta; 
 }

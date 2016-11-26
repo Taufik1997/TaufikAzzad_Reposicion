@@ -15,19 +15,19 @@ int main(){
 		switch(opcion){
 			case 1:{
 				int numerador = 0, denominador = 1;
-				cout<<"Ingrese el numerador de la primera fraccion:"
-				cin<<numerador;
-				cout<<"Ingrese el denominador de la primera fraccion:"
-				cin<<denominador;
+				cout<<"Ingrese el numerador de la primera fraccion:";
+				cin>>numerador;
+				cout<<"Ingrese el denominador de la primera fraccion:";
+				cin>>denominador;
 				racional1 = new Racional(numerador,denominador);
 				break;				
 			}
 			case 2:{
 				int numerador = 0, denominador = 1;
-				cout<<"Ingrese el numerador de la segunda fraccion:"
-				cin<<numerador;
-				cout<<"Ingrese el denominador de la segunda fraccion:"
-				cin<<denominador;
+				cout<<"Ingrese el numerador de la segunda fraccion:";
+				cin>>numerador;
+				cout<<"Ingrese el denominador de la segunda fraccion:";
+				cin>>denominador;
 				racional2 = new Racional(numerador,denominador);
 				break;
 			}
@@ -38,7 +38,7 @@ int main(){
 					cout<<"La suma es de : "<<respuesta->toString();
 
 				}else{
-					cout<<"Debe crear las dos fracciones antes de hacer una operacion";
+					cout<<"Debe crear las dos fracciones antes de hacer una operacion"<<endl;
 				}
 				
 				break;
@@ -47,7 +47,7 @@ int main(){
 				if(racional1 != NULL||racional2 != NULL){
 
 				}else{
-					cout<<"Debe crear las dos fracciones antes de hacer una operacion";
+					cout<<"Debe crear las dos fracciones antes de hacer una operacion"<<endl;
 				}
 
 				break;
@@ -56,7 +56,7 @@ int main(){
 				if(racional1 != NULL||racional2 != NULL){
 
 				}else{
-					cout<<"Debe crear las dos fracciones antes de hacer una operacion";
+					cout<<"Debe crear las dos fracciones antes de hacer una operacion"<<endl;
 				}
 
 				break;
@@ -65,7 +65,7 @@ int main(){
 				if(racional1 != NULL||racional2 != NULL){
 
 				}else{
-					cout<<"Debe crear las dos fracciones antes de hacer una operacion";
+					cout<<"Debe crear las dos fracciones antes de hacer una operacion"<<endl;
 				}
 
 				break;

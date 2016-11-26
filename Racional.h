@@ -16,10 +16,10 @@ public:
 	int getNumerador();
 	void setDenominador(int);
 	int getDenominador();
-	Racional* operator+(Racional*);
-	Racional* operator-(Racional*);
-	Racional* operator*(Racional*);
-	Racional* operator/(Racional*);
+	Racional* operator+(Racional);
+	Racional* operator-(Racional);
+	Racional* operator*(Racional);
+	Racional* operator/(Racional);
 	string toString();
 };
 
