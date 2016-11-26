@@ -38,8 +38,14 @@ Racional* Racional::operator+(Racional racional){
   Racional* respuesta = new Racional();
   int numRacional = racional.getNumerador(), denRacional = racional.getDenominador();
   int resp1, resp2;
-  resp1 = numerador*denRacional + denominador * numRacional;
+  resp1 = numerador*denRacional + denominador*numRacional;
   resp2 = denominador * denRacional ;
+  for (int i = resp2 * resp1; i > 1; i--) {  
+    if ((resp2 % i == 0) && (resp1 % i == 0)) {  
+      resp2 /= i;  
+      resp1 /= i;  
+    }
+  }  
   respuesta->setNumerador(resp1);
   respuesta->setDenominador(resp2);
 
@@ -52,6 +58,12 @@ Racional* Racional::operator-(Racional racional){
   int resp1, resp2;
   resp1 =numerador*denRacional - denominador * numRacional;
   resp2 =denominador * denRacional;
+  for (int i = resp2 * resp1; i > 1; i--) {  
+    if ((resp2 % i == 0) && (resp1 % i == 0)) {  
+      resp2 /= i;  
+      resp1 /= i;  
+    }
+  }  
   respuesta->setNumerador(resp1);
   respuesta->setDenominador(resp2);
 
@@ -64,6 +76,12 @@ Racional* Racional::operator*(Racional racional){
   int resp1, resp2;
   resp1 = numerador* numRacional;
   resp2 = denominador * denRacional;
+  for (int i = resp2 * resp1; i > 1; i--) {  
+    if ((resp2 % i == 0) && (resp1 % i == 0)) {  
+      resp2 /= i;  
+      resp1 /= i;  
+    }
+  }  
   respuesta->setNumerador(resp1);
   respuesta->setDenominador(resp2);
 
@@ -76,9 +94,9 @@ Racional* Racional::operator/(Racional racional){
   int resp1, resp2;
   resp1 = numerador*denRacional;
   resp2 = denominador * numRacional;
-  while(resp1%2==0 && resp2%2==0){
+  while(resp1 % 2==0 && resp2 % 2==0){
     resp1= resp1/2;
-    resp2= res2/2;
+    resp2= resp2/2;
   }
   respuesta->setNumerador(resp1);
   respuesta->setDenominador(resp2);
