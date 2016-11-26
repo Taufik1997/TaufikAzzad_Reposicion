@@ -3,19 +3,24 @@
 #include <string>
 
 using std::string;
+using namespace std;
 
 class Racional{
 private:
 	int numerador;
 	int denominador;
 public:
+	friend ostream& operator<<(ostream&, const Figura&);
 	Racional(int,int);
 	Racional();
-	virtual ~Racional();
 	void setNumerador(int);
 	int getNumerador();
 	void setDenominador(int);
 	int getDenominador();
+	Racional* operator+(Racional*);
+	Racional* operator-(Racional*);
+	Racional* operator*(Racional*);
+	Racional* operator/(Racional*);
 	string toString();
 };
 
