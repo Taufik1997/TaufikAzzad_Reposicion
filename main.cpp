@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string>
+#include "Racional.h"
+
 
 using namespace std;
 
 int main(){
-	Racional* racional1;
-	Racional* racional2;
+	Racional* racional1 = NULL;
+	Racional* racional2 = NULL;
 	int opcion = 0;
 	do{
 		cout<<"     Racionales\n1)Fraccion 1\n2)Fraccion 2\n3)Suma\n4)Resta\n5)Multiplicacion\n6)Division\n7)Salir\n";
@@ -30,20 +32,41 @@ int main(){
 				break;
 			}
 			case 3:{
-				
-				
+				if(racional1 != NULL||racional2 != NULL){
+					Racional* respuesta;
+					respuesta = *racional1 + *racional2;
+					cout<<"La suma es de : "<<respuesta->toString();
 
+				}else{
+					cout<<"Debe crear las dos fracciones antes de hacer una operacion";
+				}
+				
 				break;
 			}
 			case 4:{
+				if(racional1 != NULL||racional2 != NULL){
+
+				}else{
+					cout<<"Debe crear las dos fracciones antes de hacer una operacion";
+				}
 
 				break;
 			};
 			case 5:{
+				if(racional1 != NULL||racional2 != NULL){
+
+				}else{
+					cout<<"Debe crear las dos fracciones antes de hacer una operacion";
+				}
 
 				break;
 			};
 			case 6:{
+				if(racional1 != NULL||racional2 != NULL){
+
+				}else{
+					cout<<"Debe crear las dos fracciones antes de hacer una operacion";
+				}
 
 				break;
 			};

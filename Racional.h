@@ -10,7 +10,6 @@ private:
 	int numerador;
 	int denominador;
 public:
-	friend ostream& operator<<(ostream&, const Figura&);
 	Racional(int,int);
 	Racional();
 	void setNumerador(int);

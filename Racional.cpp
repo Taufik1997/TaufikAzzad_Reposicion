@@ -71,6 +71,6 @@ Racional* Racional::operator*(Racional* racional){
 
 string Racional::toString(){
 	stringstream ss;
-	ss<<"Fraccion: "<<numerador<<"/"<<denominador<<endl;
+	ss<<numerador<<"/"<<denominador<<endl;
 	return ss.str();
 }
