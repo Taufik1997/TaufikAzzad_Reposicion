@@ -83,5 +83,6 @@ int main(){
 	}while(opcion>=0 && opcion <=6);//Fin do while
 	delete racional1;
 	delete racional2;
+	
 	return 0;
 }
